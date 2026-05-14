@@ -1,2 +1,23 @@
-streamlit
-requests
+
+football-engine/
+│
+├── main.py             # FastAPI
+├── app.py              # Streamlit dashboard
+├── requirements.txt
+└── ...
+# app.py
+import streamlit as st
+import requests
+
+st.title("Football AI Dashboard")
+
+# API endpoint
+API_URL = "https://football-ai-api.onrender.com/predict"
+
+# Örnek form
+home_xg = st.number_input("Home xG", 0.0, 5.0, 1.0)
+away_xg = st.number_input("Away xG", 0.0, 5.0, 1.0)
+
+if st.button("Tahmin Et"):
+    response = requests.get(API_URL)
+    st.write("Prediction:", response.json())
