@@ -1,14 +1,15 @@
-from typing import Optional
-
 from fastapi import FastAPI
 
 app = FastAPI()
 
-
 @app.get("/")
-async def root():
-    return {"message": "ELBET BAŞARICAM"}
+def home():
+    return {"status": "Football AI SaaS Actived to CK !!"}
 
-@app.get("/items/{item_id}")
-def read_item(item_id: int, q: Optional[str] = None):
-    return {"item_id": item_id, "q": q}
+@app.get("/predict")
+def predict():
+    return {
+        "home_win": 0.45,
+        "draw": 0.28,
+        "away_win": 0.27
+    }
