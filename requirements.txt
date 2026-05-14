@@ -7,5 +7,5 @@ scipy
 requests
 psycopg2-binary
 redis
-streamlit
 xgboost
+python-dotenv
