@@ -1,0 +1,8 @@
+football-engine/
+│
+├── main.py
+├── requirements.txt
+├── Dockerfile (opsiyonel)
+├── src/
+├── app.py (Streamlit varsa)
+└── config.py
